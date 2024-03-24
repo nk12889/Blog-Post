@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <style>
+        .container1 {
+            background-color: rgb(96, 106, 245);
+            height: 500px;
+            width: 380px;
+            color: white;
+            font-weight: bold;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            font-family: sans-serif;
+            text-decoration: underline;
+            /* background-color: aqua; */
+        }
+
+        .blogForm label {
+            margin-left: 20px;
+            margin-top: 50PX;
+            font-family: sans-serif;
+        }
+        .blogForm label:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        .blogForm input {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding: 7px;
+            width: 85%;
+        }
+
+        .input {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding: 10px;
+            width: 85%;
+        }
+
+        button {
+            margin-left: 105px;
+            margin-top: 15px;
+            width: 150px;
+            padding: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: rgb(227, 217, 116);
+            font-weight: bold;
+            border-radius: 12px;
+            color: rgb(240, 12, 12);
+            border: 1px;
+        }
+        button:hover{
+            color : rgb(237, 242, 244)
+        }
+        .main{
+           width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+    <div class="container1">
+        <br>
+        <h2>Create a new blog post</h2>
+        <form action="/submit" method="post" class="blogForm">
+            <label for="title">Blog Title :</label><br>
+            <input type="text" class="input">
+            <br><br>
+            <label for="title">Blog Author :</label><br>
+            <input type="text" class="input">
+            <br><br>
+            <label for="title">Blog Content :</label><br>
+            <textarea name="text" id="textarea" class="input" cols="30" rows="5"></textarea><br>
+
+            <button type="submit" onsubmit="addBlog()"  id="addBlog" >Submit </button>
+        </form>
+    </div>
+    <div class="container2">
+        <p id="blog"></p>
+    </div>
+</div>
+</body>
+
+</html>
